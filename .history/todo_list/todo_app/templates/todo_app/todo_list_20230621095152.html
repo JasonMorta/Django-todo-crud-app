@@ -60,7 +60,7 @@
           {# 'url' gererates a url path for the todo_update view and passes the todo.pk/id as an argument #}
           {# For example: /todo/update/1 #}
           <a href="{% url 'todo_update' todo.pk %}">
-            <button>Edit</button>
+            <button>Update</button>
           </a>
 
           <form action="{% url 'todo_delete' todo.pk %}" method="post">

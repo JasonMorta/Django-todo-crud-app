@@ -55,12 +55,12 @@
 
         {# Update / Delete button container #}
         <div class="crud-btns">
-          
-          {# 'todo.pk' refers to the primary key of a Todo object / id row in the database. #}
-          {# 'url' gererates a url path for the todo_update view and passes the todo.pk/id as an argument #}
-          {# For example: /todo/update/1 #}
+          {% comment %} 
+          'todo.pk' refers to the primary key of a Todo object / id row in the database.
+          You can write any text or HTML code here. 
+          {% endcomment %}
           <a href="{% url 'todo_update' todo.pk %}">
-            <button>Edit</button>
+            <button>Update</button>
           </a>
 
           <form action="{% url 'todo_delete' todo.pk %}" method="post">

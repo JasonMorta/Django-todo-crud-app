@@ -37,38 +37,16 @@ def todo_create(request):
     return render(request, 'todo_app/todo_create.html', {'form': form}) # navigate to todo_create.html
 
 
-# This function can be triggered by clicking the edit or update button
-# It has two main goals: 
-## 1. Get the todo from the database by id > inserts that data into the form fields. 
-## 2. Grabs all the new input filed data > updates the todo in the database > returns to the home page
 def todo_update(request, pk):
-    
-    # get the todo from the database
-    # The get() method returns a single with the same id as the primary key (pk) value.
-    # The pk is the primary key of the todo, that is, the id of the todo
-    # So 'pk' = 'id' of the todo in the database
-    
+    print('todo_update')
     todo = Todo.objects.get(pk=pk)
-    # To fill the form with the data from the database, we need to pass the todo object to the form
-    
-    # if the request method is POST, then update the todo in the database with the new data
     if request.method == 'POST':
-        
-        # 'instance=todo' means populate the data from the database into the form
-        # 'instance'refers to the object that the form is editing
-        # The 'todo' object contains the data from the database
         form = TodoForm(request.POST, instance=todo)
         if form.is_valid():
-            form.save() # save the form to the database/ UPDATE
-            
-               # After updating the todo, redirect to the home page
+            form.save()
             return redirect('todo_list')
-        
-        # else, redirect to todo_update.html to render the form into the template
     else:
         form = TodoForm(instance=todo)
-     
-     #When the edit button is clicked, the todo_update.html template is rendered with the form
     return render(request, 'todo_app/todo_update.html', {'form': form})
 
 

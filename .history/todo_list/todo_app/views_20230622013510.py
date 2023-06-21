@@ -37,10 +37,6 @@ def todo_create(request):
     return render(request, 'todo_app/todo_create.html', {'form': form}) # navigate to todo_create.html
 
 
-# This function can be triggered by clicking the edit or update button
-# It has two main goals: 
-## 1. Get the todo from the database by id > inserts that data into the form fields. 
-## 2. Grabs all the new input filed data > updates the todo in the database > returns to the home page
 def todo_update(request, pk):
     
     # get the todo from the database
