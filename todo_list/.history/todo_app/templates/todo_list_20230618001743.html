@@ -1,0 +1,14 @@
+{% for todo in todos %}
+  <h2>{{ todo.title }}</h2>
+  <p>{{ todo.description }}</p>
+  <p>{{ todo.created_at }}</p>
+  <a href="{% url 'todo_update' todo.pk %}">Update</a>
+  <form action="{% url 'todo_delete' todo.pk %}" method="post">
+      {% csrf_token %}
+      <button type="submit">Delete</button>
+  </form>
+  <hr>
+{% empty %}
+  <p>No todos found.</p>
+{% endfor %}
+<a href="{% url 'todo_create' %}">Create New Todo</a>
