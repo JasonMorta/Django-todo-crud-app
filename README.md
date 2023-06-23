@@ -1,9 +1,9 @@
 
 # Django App Setup
 
-- The purpose of this app was to practice Django by creating a simple to-do list that does all the basic crud operations. I've added extensive documentation in each file to explain the logic of the code.
+- The purpose of this Projects was to practice Django by creating a simple apps that does all the basic crud operations an different objects. I've added extensive documentation in each file to explain the logic of the code.
 
-- All list to-do items will be saved to a database. This app will be using the MySQL desktop app as its database.
+- All objects will be saved to a database. This app will be using the MySQL desktop app as its database.
 
 - This project will mainly serve as a guide for future projects.
 
@@ -174,3 +174,12 @@ or
 - NOTE! If image external CSS does'nt work, place the tag inside a div tag.
 
 - Finally, Start the Django development server. 
+
+
+## Screenshots
+
+- The idea is create all app in a single project and access each one from the home page. More app will be added soon!
+
+![Home page](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![To-do app](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+
