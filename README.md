@@ -1,7 +1,7 @@
 
 # Django Apps
 
-- The purpose of this Projects was to practice Django by creating a simple apps that does all the basic crud operations an different objects. I've added extensive documentation in each file to explain the logic of the code.
+- The purpose of this Projects was to practice Django by creating a simple apps that does all the basic crud operations on different objects. I've added extensive documentation in each file to explain the logic of the code.
 
 - All objects will be saved to a database. This app will be using the MySQL desktop app as its database.
 
