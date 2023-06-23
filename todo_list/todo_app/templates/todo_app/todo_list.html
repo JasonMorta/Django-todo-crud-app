@@ -5,16 +5,25 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/styles.css' %}"
+    />
     <title>Document</title>
   </head>
 
-
   <body>
+    <img class="logo" src="{% static 'images/todo_list.png' %}" alt="Logo" />
 
-  <img class="logo" src="{% static 'images/todo_list.png' %}" alt="Logo">
+    <div class="to-do-counter">
+      <h3>Todos: {{ todos|length }}</h3>
+    </div>
+
+ {# Renders all todos #}
     <div class="todo-container">
-      {# Renders all todos #} {% for todo in todos %}
+
+      {% for todo in todos %}
       <div class="todo-content">
         <h2>{{ todo.title }}</h2>
         <div>
@@ -24,9 +33,8 @@
 
         {# Update / Delete button container #}
         <div class="crud-btns">
-          
-          {# 'todo.pk' refers to the primary key of a Todo object / id row in the database. #}
-          {# 'url' gererates a url path for the todo_update view and passes the todo.pk/id as an argument #}
+          {# 'todo.pk' refers to the primary key of a Todo object / id row in the database. #} 
+          {# 'url' gererates a url path for the todo_update view and passes the todo.pk/id as an argument #} 
           {# For example: /todo/update/1 #}
           <a href="{% url 'todo_update' todo.pk %}">
             <button>Edit</button>

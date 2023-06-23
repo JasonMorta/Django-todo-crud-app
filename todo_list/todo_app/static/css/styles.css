@@ -9,10 +9,7 @@ body {
 }
 
 
-
-
 /* todo_list.html (template) */
-
 .todo-container {
     display: flex;
     flex-direction: row;
@@ -60,6 +57,18 @@ body {
     filter: drop-shadow(2px 4px 6px black);
 }
 
+.to-do-counter{
+  position: fixed;
+  left: 0px;
+  top: 15%;
+  background-color: brown;
+  padding: 10px;
+}
+
+.to-do-counter h3 {
+  margin: 0%;
+}
+
 
 /* todo_delete.html */
 .delete-container {
@@ -67,7 +76,7 @@ body {
   border-radius: 5px;
   padding: 10px;
   margin-bottom: 10px;
-  width: 230px;
+  width: max-content;
   margin: 10px;
   background-color: aliceblue;
   color: darkcyan;
