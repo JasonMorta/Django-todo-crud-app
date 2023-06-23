@@ -178,4 +178,6 @@ or
 ```
 - This line will generate the correct URL to the **style.css** file based on the **STATIC_URL** setting.
 
+- NOTE! If image external CSS does'nt work, place the tag inside a div tag.
+
 - Finally, Start the Django development server. 

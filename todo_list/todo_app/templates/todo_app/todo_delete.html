@@ -11,11 +11,14 @@
 </head>
 
 <body>
-  <h2>Delete "{{ todo.title }}"?</h2>
-  <form action="" method="post">
-    {% csrf_token %}
-    <button type="submit">Delete</button>
-  </form>
+ <div class="delete-container">
+    <img class="logo" src="{% static 'images/todo_list.png' %}" alt="Logo">
+    <h2>Delete "{{ todo.title }}"?</h2>
+    <form method="post">
+      {% csrf_token %}
+      <button type="submit">Delete</button>
+    </form>
+ </div>
 </body>
 
 </html>

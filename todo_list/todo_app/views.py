@@ -71,10 +71,14 @@ def todo_update(request, pk):
      #When the edit button is clicked, the todo_update.html template is rendered with the form
     return render(request, 'todo_app/todo_update.html', {'form': form})
 
-
+# When the delete button is clicked, redirect to the todo_delete.html template
 def todo_delete(request, pk):
-    todo = Todo.objects.get(pk=pk)
+    
+    todo = Todo.objects.get(pk=pk) # get the todo from the database by id
+    
     if request.method == 'POST':
-        todo.delete()
+        todo.delete() 
+        
         return redirect('todo_list')
+    
     return render(request, 'todo_app/todo_delete.html', {'todo': todo})

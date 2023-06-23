@@ -12,8 +12,8 @@
 
   <body>
 
+  <img class="logo" src="{% static 'images/todo_list.png' %}" alt="Logo">
     <div class="todo-container">
-      <img class="logo" src="{% static 'images/todo_list.png' %}" alt="Logo">
       {# Renders all todos #} {% for todo in todos %}
       <div class="todo-content">
         <h2>{{ todo.title }}</h2>
@@ -32,7 +32,7 @@
             <button>Edit</button>
           </a>
 
-          <form action="{% url 'todo_delete' todo.pk %}" method="post">
+          <form action="{% url 'todo_delete' todo.pk %}" method="get">
             {% csrf_token %}
             <button type="submit">Delete</button>
           </form>
