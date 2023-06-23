@@ -181,5 +181,6 @@ or
 - The idea is create all app in a single project and access each one from the home page. More app will be added soon!
 
 ![Home page](https://github.com/JasonMorta/Django-todo-crud-app/blob/main/screenshots/homepage.png)
-![To-do app](https://github.com/JasonMorta/Django-todo-crud-app/blob/main/screenshots/todoapp.png=250x250)
+![To-do app]<img src="https://github.com/JasonMorta/Django-todo-crud-app/blob/main/screenshots/todoapp.png" alt="Image" width="300" height="00">
+
 
