@@ -8,46 +8,12 @@
     <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
     <title>Document</title>
   </head>
-  <style>
-    .todo-container {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: flex-start;
-    }
-    .add-btn {
-      position: fixed;
-      bottom: 5px;
-      left: 50%;
-      background-color: rgb(28 33 24);
-      padding: 10px;
-      border: 1px solid gray;
-      color: aliceblue;
-      text-decoration: none;
-      font-family: cursive;
-    }
 
-    .todo-content {
-      border: 1px solid gray;
-      border-radius: 5px;
-      padding: 10px;
-      margin-bottom: 10px;
-      width: 230px;
-      margin: 10px;
-    }
-
-    .crud-btns {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: flex-start;
-      gap: 10px;
-    }
-  </style>
 
   <body>
+
     <div class="todo-container">
+      <img class="logo" src="{% static 'images/todo_list.png' %}" alt="Logo">
       {# Renders all todos #} {% for todo in todos %}
       <div class="todo-content">
         <h2>{{ todo.title }}</h2>

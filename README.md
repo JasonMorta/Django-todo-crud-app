@@ -172,6 +172,8 @@ STATIC_URL = 'static/'
 
 ```html
 <link rel="stylesheet" href="{% static 'style.css' %}">
+or
+<img src="{% static 'my_app/example.jpg' %}" alt="My image">
 
 ```
 - This line will generate the correct URL to the **style.css** file based on the **STATIC_URL** setting.
