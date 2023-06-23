@@ -8,13 +8,6 @@
 - This project will mainly serve as a guide for future projects.
 
 
-
-
-
-
-
-
-
 ### Project Setup
 
 - This guide walks you through the setup process for creating a Django app.
