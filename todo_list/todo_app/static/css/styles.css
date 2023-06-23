@@ -1,7 +1,6 @@
 body {
-    background-color: #242424;
     color: #afafaf;
-    background-color: #242424;
+    background-color: rgb(17 17 17);
     color: #afafaf;
     max-width: 900px;
     margin: auto;
@@ -17,17 +16,20 @@ body {
     justify-content: center;
     align-items: flex-start;
     margin-top: 50px;
+    position: relative;
   }
 
   .add-btn {
-    position: fixed !important;
-    top: 50%;
-    left: 5px;
-
-
-
+    position: sticky;
+    left: 0px;
+    top: 22px;
+    transform: translate(0px, 10px);
     text-decoration: none;
+  }
 
+  .add-btn button {
+    position: absolute;
+    left: -50px;
   }
 
   .todo-content {
@@ -82,13 +84,12 @@ body {
   z-index: 2;
   top: 0;
   background-color: brown;
-  padding: 10px;
+  padding: 5px 15px;
 }
 
 .to-do-counter h3 {
   margin: 0%;
 }
-
 
 /* todo_delete.html */
 .delete-container {
