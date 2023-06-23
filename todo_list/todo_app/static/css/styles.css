@@ -16,6 +16,7 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     align-items: flex-start;
+    margin-top: 50px;
   }
 
   .add-btn {
@@ -76,8 +77,10 @@ body {
 
 .to-do-counter{
   position: fixed;
-  left: 0px;
-  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  top: 0;
   background-color: brown;
   padding: 10px;
 }
