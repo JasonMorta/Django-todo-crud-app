@@ -19,15 +19,14 @@ body {
   }
 
   .add-btn {
-    position: fixed;
-    bottom: 5px;
-    left: 50%;
-    background-color: rgb(28 33 24);
-    padding: 10px;
-    border: 1px solid gray;
-    color: aliceblue;
+    position: fixed !important;
+    top: 50%;
+    left: 5px;
+
+
+
     text-decoration: none;
-    font-family: cursive;
+
   }
 
   .todo-content {
@@ -35,10 +34,28 @@ body {
     border-radius: 5px;
     padding: 10px;
     margin-bottom: 10px;
-    width: 230px;
+    width: 335px;
     margin: 10px;
     background-color: aliceblue;
     color: darkcyan;
+    position: relative;
+  }
+
+  .todo-content pre {
+    max-height: 100px;
+    overflow: auto;
+  }
+
+  .todo-content pre::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  .todo-content pre::-webkit-scrollbar-track {
+    background-color: #e0e0e0;
+  }
+
+  .todo-content pre::-webkit-scrollbar-thumb {
+    background-color: #afafaf;
   }
 
   .crud-btns {
